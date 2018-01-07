@@ -50,15 +50,29 @@ namespace api.Controllers
         return new NoContentResult();
     }
 
-        [HttpPost]
-        public IActionResult Create([FromBody] TodoItem item){
-            if(item ==null){
-                return BadRequest();
-            }
-            _context.TodoItem.Add(item);
-            _context.SaveChanges();
-            return CreatedAtRoute("GetTodo", new {id = item.Id}, item);
+    [HttpDelete("{id}")]
+    public IActionResult Delete(long id){
+        var todo = _context.TodoItem.FirstOrDefault(t => t.Id == id);
+        if (todo == null)
+        {
+            return NotFound();
         }
+        _context.TodoItem.Remove(todo);
+        _context.SaveChanges();
+        return new NoContentResult();
     }
+   
+    [HttpPost]
+    public IActionResult Create([FromBody] TodoItem item){
+        if(item ==null){
+            return BadRequest();
+        }
+        _context.TodoItem.Add(item);
+        _context.SaveChanges();
+        return CreatedAtRoute("GetTodo", new {id = item.Id}, item);
+    }
+}
+
+   
 
 }
