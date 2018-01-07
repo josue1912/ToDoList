@@ -1,0 +1,10 @@
+/home/josue/projetos/dotnet/api/bin/Debug/netcoreapp2.0/api.deps.json
+/home/josue/projetos/dotnet/api/bin/Debug/netcoreapp2.0/api.runtimeconfig.json
+/home/josue/projetos/dotnet/api/bin/Debug/netcoreapp2.0/api.runtimeconfig.dev.json
+/home/josue/projetos/dotnet/api/bin/Debug/netcoreapp2.0/api.dll
+/home/josue/projetos/dotnet/api/bin/Debug/netcoreapp2.0/api.pdb
+/home/josue/projetos/dotnet/api/obj/Debug/netcoreapp2.0/api.csproj.CoreCompileInputs.cache
+/home/josue/projetos/dotnet/api/obj/Debug/netcoreapp2.0/api.AssemblyInfoInputs.cache
+/home/josue/projetos/dotnet/api/obj/Debug/netcoreapp2.0/api.AssemblyInfo.cs
+/home/josue/projetos/dotnet/api/obj/Debug/netcoreapp2.0/api.dll
+/home/josue/projetos/dotnet/api/obj/Debug/netcoreapp2.0/api.pdb
