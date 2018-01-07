@@ -32,5 +32,17 @@ namespace api.Controllers
             }
             return new ObjectResult(item);
         }
+
+        [HttpPost]
+        public IActionResult Create([FromBody] TodoItem item){
+            if(item ==null){
+                return BadRequest();
+            }
+
+            _context.TodoItem.Add(item);
+            _context.SaveChanges();
+
+            return CreatedAtRoute("GetTodo", new {id = item.Id}, item);
+        }
     }
 }
