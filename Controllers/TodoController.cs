@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using api.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -18,5 +19,18 @@ namespace api.Controllers
             }
         }
         
+        [HttpGet]
+        public IEnumerable<TodoItem> GetAll(){
+            return _context.TodoItem.ToList();
+        }
+
+        [HttpGet("{id}", Name = "GetTodo")]
+        public IActionResult GetById(long id){
+            var item = _context.TodoItem.FirstOrDefault(t => t.Id == id);
+            if (item == null){
+                return NotFound();
+            }
+            return new ObjectResult(item);
+        }
     }
 }
